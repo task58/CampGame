@@ -1,0 +1,27 @@
+{
+  "name": "campgame",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development && webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/home/task/projects/typescript/CampGame/CampGame"
+  },
+  "author": "task58",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.50.1"
+  },
+  "devDependencies": {
+    "expose-loader": "^1.0.3",
+    "ts-loader": "^8.0.13",
+    "typescript": "^4.1.3",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  }
+}
