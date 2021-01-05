@@ -4,8 +4,8 @@ import {SceneManager} from "./scenes/SceneManager"
 const config: Phaser.Types.Core.GameConfig = {
     title: "CampGame",    
     version: "0.0.1",       
-    width: 640,            
-    height: 480,            
+    width: 800,            
+    height: 500,            
     parent:"game",          
     type: Phaser.AUTO,      
     scene: SceneManager    

@@ -7,19 +7,21 @@ var phaser = path.join(pathToPhaser, "dist/phaser.js");
 module.exports = {
     //実行開始地点となるファイル
     entry: './src/main.ts',
-    //出力先
+
+    mode : "development",
+   
     output: {
-        //カレントパス/dist
+        
         path: path.resolve(__dirname, "dist"),
-        //出力ファイル名
+        
         filename: "bundle.js"
     },
-    //依存関係解決の対象とするモジュール
+    
     module: {
         rules: [
-            //*.ts なファイルはts-loaderに処理を依頼。但し/node_modules/内は除く
+            
             { test: /\.ts$/, loader: "ts-loader", exclude: "/node_modules/" },
-            //phaser.jsなファイルはexposer-loaderに処理を依頼。phaserをグローバルオブジェクトとして出力
+            
             {
                 test: /phaser\.js$/,
                 loader: "expose-loader",
@@ -29,7 +31,7 @@ module.exports = {
             }
         ]
     },
-    //webpack-dev-serverの起動設定
+    
     devServer: {
         contentBase: path.resolve(__dirname, "./dist"),
         publicPath: "/",
