@@ -1,5 +1,5 @@
 export let AssetDatas : AssetData[] = [
-    {key:"title",url:"Assets/Title.png"}
+    {key:"title",url:"Assets/Title.png"},
 ]
 
 class AssetData {

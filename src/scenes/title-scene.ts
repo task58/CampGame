@@ -23,7 +23,7 @@ export class TitleScene extends Phaser.Scene {
         let space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
         if(space.isDown){
-            // this.scene.start("menu");
+            this.scene.start("menu");
         }
     }
 }
