@@ -1,13 +1,6 @@
 export class InputManager extends Phaser.Scene{
 
-    public keyCode = new InputCode();
-
-    private keys = {
-        "A":this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A),
-        "D":this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D),
-        "S":this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S),
-        "W":this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
-    }
+    private keys = {}
 
     constructor(){
         super({
@@ -15,30 +8,28 @@ export class InputManager extends Phaser.Scene{
         })
     }
 
-    public getKeyDown(key : string){
-        var input = this.keys[key];
-        if(input instanceof Phaser.Input.Keyboard.Key){
-            return input.isDown;
+
+    create(){
+        for(let index in Phaser.Input.Keyboard.KeyCodes){
+            this.keys[index] = this.input.keyboard.addKey(index);
+        }
+    }
+
+    public getKeyDown(key : string | number){
+        var inputKey = this.keys[key];
+        if(inputKey instanceof Phaser.Input.Keyboard.Key){
+            return inputKey.isDown;
         }else{
             return false;
         }
     }
 
-    public getKeyUp(key : string){
-        var input = this.keys[key];
-        if(input instanceof Phaser.Input.Keyboard.Key){
-            return input.isUp;
+    public getKeyUp(key : string | number){
+        var inputKey = this.keys[key];
+        if(inputKey instanceof Phaser.Input.Keyboard.Key){
+            return inputKey.isUp;
         }else{
             return false;
         }
     }
-
-    
-}
-
-export class InputCode{
-    public A : string = "A";
-    public D : string = "D";
-    public S : string = "S";
-    public W : string = "W";
 }

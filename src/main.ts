@@ -8,7 +8,14 @@ const config: Phaser.Types.Core.GameConfig = {
     height: 500,            
     parent:"game",          
     type: Phaser.AUTO,      
-    scene: SceneManager    
+    scene: SceneManager,
+    fps : {
+        min : 10,
+        target : 30
+    },
+    input : {
+        keyboard : true
+    }    
 };
 
 export class Game extends Phaser.Game{

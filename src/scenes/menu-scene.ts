@@ -10,6 +10,6 @@ export class MenuScene extends Phaser.Scene {
     }
 
     create(){
-        this.add.existing(new Button(()=>console.log("aaaa"),this,30,30,"Button"));
+        this.add.existing(new Button(()=>{this.scene.start("simple2p")},this,this,0,0,"Simple2p"));
     }
 }

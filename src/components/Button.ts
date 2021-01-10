@@ -7,9 +7,9 @@ const defaultStyle:Phaser.Types.GameObjects.Text.TextStyle={
 
 export class Button extends Phaser.GameObjects.Text{
 
-    constructor(callBack:Function,scene:Phaser.Scene,x:number,y:number,text:string|string[],style:Phaser.Types.GameObjects.Text.TextStyle = defaultStyle){
+    constructor(callBack:Function,callbackContext:any,scene:Phaser.Scene,x:number,y:number,text:string|string[],style:Phaser.Types.GameObjects.Text.TextStyle = defaultStyle){
         super(scene,x,y,text,style);
         this.setInteractive();
-        this.on("pointerdown",callBack,scene);
+        this.on("pointerdown",callBack,callbackContext);
     }
 }
