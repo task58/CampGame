@@ -28,6 +28,11 @@ module.exports = {
                 options: {
                     exposes:['phaser']
                 }
+            },
+
+            {
+                test: /\.(jpg|png|jpeg)$/,
+                loader: 'url-loader'
             }
         ]
     },
