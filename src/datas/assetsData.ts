@@ -9,7 +9,7 @@ export let AssetDatas : AssetData[] = [
     {key : "player_blue:attack" ,   url : "Assets/player-blue-attack.png"   },
     {key : "player_red"         ,   url : "Assets/player-red.png"           },
     {key : "player_red:attack"  ,   url : "Assets/player-red-attack.png"    },
-    {key : "spawn_Grid;blue"    ,   url : "Assets/spawn-Grid-blue.png"      },
+    {key : "spawn_Grid:blue"    ,   url : "Assets/spawn-Grid-blue.png"      },
     {key : "spawn_Grid:red"     ,   url : "Assets/spawn-Grid-red.png"       },
     {key : "void_Grid"          ,   url : "Assets/void-Grid.png"            },
 ]
