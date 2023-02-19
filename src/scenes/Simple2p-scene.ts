@@ -29,6 +29,8 @@ export class Simple2pScene extends Phaser.Scene{
     update():void{
         if(this.InputManager.getKeyDown(Phaser.Input.Keyboard.KeyCodes.S)){
             this.player1.Translate(10,0)
+            console.log("Debug : S key Pressed")
+            
         }
     }
 }

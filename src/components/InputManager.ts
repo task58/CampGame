@@ -10,8 +10,9 @@ export class InputManager extends Phaser.Scene{
 
 
     create(){
+        console.log(Phaser.Input.Keyboard.KeyCodes)
         for(let index in Phaser.Input.Keyboard.KeyCodes){
-            this.keys[index] = this.input.keyboard.addKey(index);
+            this.keys[Phaser.Input.Keyboard.KeyCodes[index]] = this.input.keyboard.addKey(index);
         }
     }
 
